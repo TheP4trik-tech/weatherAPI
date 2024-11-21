@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#container  {
+    @apply w-screen h-screen flex flex-col justify-center items-center;
+}
+#forecast_container > .forecast_hour{
+    margin: 4px 8px;
+}
+
+#forecast_time_svg{
+     @apply size-5;
+     margin: 0 auto
+     
+}
+.forecast_container{
+    @apply bg-primarycolor;
+    display: flex;
+  
+}
+.forecast_temp{
+    font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+}
+.forecast_time{
+    @apply  text-gray-900 opacity-55;
+    font-weight: 500;
+}
+
+.forecast{
+    @apply bg-primarycolor;
+    margin: auto
+
+}
+.forecast_hour{
+    @apply bg-slate-100 inline items-center;
+    border-radius: 11px;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  
+}
+.weather_detail_name{
+    @apply  text-gray-900 opacity-55;
+    font-weight: 500;
+}
+.value{
+    font-weight: 600;
+}
+
+.forecast_detail_svg{
+    @apply size-5;
+    margin-left: auto;
+    margin-right: 40px;
+    
+}
+
+.weather_details_container{
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, auto);
+    gap: 10px 10px;
+    padding: 40px 0px;
+    @apply bg-primarycolor;
+    
+}
+.weather_detail_box{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px; /* velikost prvků */
+    @apply bg-slate-100;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.value{
+@apply text-sm
+}
+
+

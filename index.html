@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <title>Weather Api</title>
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <div class="absolute bg-slate-100  items-center content-center" id="container">
+        <nav class="flex m-10 justify-center ">
+            <p class="font-normal mr-5 text-[2rem] ">Just Weather</p>
+            <form>
+                <label for="city"><input type="text"
+                        class="input max-w-screen-sm placeholder:text-primarygrey p-5 placeholder:font-sans placeholder:font-semibold placeholder:translate-y-1  h-6  bg-primarycolor input-bordered placeholder:text-[1.2rem] focus:placeholder:opacity-0 focus:border-blue-400 focus:focus-within:border-blue-200 focus:focus-within:outline-none w-[64rem]"
+                        placeholder="Search for cities"></label>
+            </form>
+        </nav>
+        <div id="today_weather" class="today_weather">
+            <div id="country_name" class="text-gray-950 block font-normal text-5xl">Prague</div>
+            <div id="today_weather row" class="flex mt-7">
+                <div id="today_temp" class="text-5xl  font-semibold"> 10°</div>
+                <p id="tonight_temp" class="text-5xl ml-2 font-semibold text-gray-900 opacity-55"> -5° </p>
+                <object id="today_weather_svg" class="size-28 ml-10 -translate-y-9"
+                    data="./weather_icons/sunny.svg"></object>
+            </div>
+        </div>
+        <div class="forecast p-14 w-3/5">
+            <p class="forecast_text block text-gray-950 opacity-55 ml-2   text-2xl">TODAY'S FORECAST</p>
+            <div id="forecast_container" class="forecast_container overflow-x-scroll">
+                <div class="forecast_hour hour_0">
+                    <p class="forecast_time">0:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h0">10°</p>
+                </div>
+                <div class="forecast_hour hour_1">
+                    <p class="forecast_time">1:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h1 .p">10°</p>
+                </div>
+                <div class="forecast_hour hour_2">
+                    <p class="forecast_time">2:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h2">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_3">
+                    <p class="forecast_time">3:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h3">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_4">
+                    <p class="forecast_time">4:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h4">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_5">
+                    <p class="forecast_time">5:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h5">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_6 ">
+                    <p class="forecast_time">06:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h6">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_7">
+                    <p class="forecast_time">07:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h7">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_8">
+                    <p class="forecast_time">08:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h8">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_9">
+                    <p class="forecast_time">09:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h9">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_10">
+                    <p class="forecast_time">10:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h10">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_11">
+                    <p class="forecast_time">11:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h11">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_12">
+                    <p class="forecast_time">12:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h12">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_13">
+                    <p class="forecast_time">13:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h13">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_14">
+                    <p class="forecast_time">14:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h14">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_15">
+                    <p class="forecast_time">15:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h15">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_16">
+                    <p class="forecast_time">16:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h16">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_17">
+                    <p class="forecast_time">17:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h17">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_18">
+                    <p class="forecast_time">18:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h18">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_19">
+                    <p class="forecast_time">19:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h19">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_20">
+                    <p class="forecast_time">20:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h20">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_21">
+                    <p class="forecast_time">21:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h21">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_22">
+                    <p class="forecast_time">22:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h22">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+                <div class="forecast_hour hour_23">
+                    <p class="forecast_time">23:00</p>
+                    <img id="forecast_time_svg" class="forecast_time_svg" src="./weather_icons/sunny.svg">
+                    <p class="forecast_temp_h23">TEMPERATURE YET TO BE DISPLAYED</p>
+                </div>
+            </div>
+        </div>
+        <div class="weather_details relative w-3/5 z-3mb-24">
+            <p class="text_weather_details text-2xl text-gray-950 bg-slate-100 opacity-55">WEATHER DETAILS</p>
+            <div class="weather_details_container">
+                <div class="weather_detail_box humidity">
+                    <h1 class="weather_detail_name">Humidity</h1>
+                    <!-- <img class="forecast_detail_svg" src="./weather_details_icons/humidity.svg"> -->
+                    <p class="value humidity">%</p>
+                </div>
+                <div class="weather_detail_box sunset">
+                    <h1 class="weather_detail_name">Sun Set</h1>
+                    <img src="./weather_details_icons/sunset.svg" class="forecast_detail_svg">
+                    <p class="value sunset">Sunset time</p>
+                </div>
+                <div class="weather_detail_box sunrise">
+                    <p class="weather_detail_name">Sun Rise</p>
+
+                    <img src="./weather_details_icons/sunrise.svg" alt="sunrise" class="forecast_detail_svg">
+                    <p class="value sunrise">Sunrise time</p>
+                </div>
+                <div class="weather_detail_box chance_of_rain">
+                    <p class="weather_detail_name">Rain</p>
+                    <img src="./weather_details_icons/sunrise.svg" alt="chance of rain" class="forecast_detail_svg">
+                    <p class="value rain">27%</p>
+                </div>
+                <div class="weather_detail_box wind">
+                    <p class="weather_detail_name">Wind Speed</p>
+                    <img src="./weather_details_icons/sunrise.svg" alt="wind speed" class="forecast_detail_svg">
+                    <p class="value windspeed">25 km/h</p>
+                </div>
+                <div class="weather_detail_box uv">
+                    <p class="weather_detail_name">UV INDEX</p>
+                    <img src="./weather_details_icons/sunrise.svg" alt="uv" class="forecast_detail_svg">
+                    <p class="value uv">X / X</p>
+                </div>
+                <div class="weather_detail_box feel">
+                    <p class="weather_detail_name">Fells Like</p>
+                    <img src="./weather_details_icons/sunrise.svg" alt="feel" class="forecast_detail_svg">
+                    <p class="value apparent_temp"></p>
+                </div>
+                <div class="weather_detail_box visibility">
+                    <p class="weather_detail_name">Visibility</p>
+                    <img src="./weather_details_icons/sunrise.svg" alt="feel" class="forecast_detail_svg">
+                    <p class="value visibility">m</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
